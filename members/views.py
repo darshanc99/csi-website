@@ -16,6 +16,15 @@ def index(request):
 def detail(request, member_id):
     try:
         batch = Batch.objects.get(pk=member_id)
+        q_set = batch.batchdetails_set.all()
+        groups = {}
+        for person in q_set:
+            if person.position not in groups:
+                groups[person.position] = []
+            groups[person.position].append(person)
+        print(groups)
+			
+		
     except Batch.DoesNotExist:
         raise Http404("batch does not exist")
-    return render(request,'members/members_detail.html',{'batch':batch})   
+    return render(request,'members/members_detail.html',{'groups':groups})   

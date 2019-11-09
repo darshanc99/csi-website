@@ -1,27 +1,18 @@
 {% extends 'members/descriptionbase.html' %}
 {% block body %}
-
-<section id="one" class="spotlights">
-    {% for member in batch.batchdetails_set.all %}
-    <div class="cardd">
-        <img src="{{member.dp}}" alt="Loading" class="bodyy"> <p></p>
-      <div class="footerr">
-        <button>{{member.name}}</button>
-      </div>
-      <div class="footerr">
-        <button>{{member.position}}</button>
-      </div>
-    </div>
 <style>
   .cardd {
     display: flex;
     flex-direction: column;
     height: 300px;
-    width: 200px;
+    width: 300px;
     border: 0px solid black;
     position: relative;
     margin-left: auto;
-    margin-right: auto;
+    margin-right:auto;
+    margin-top: 20px; 
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .cardd .header {
@@ -33,29 +24,68 @@
 
   .cardd .bodyy {
     display: flex;
-    flex: 5;
+    flex-wrap:wrap;
     justify-content: center;
     align-items: center;
     border-bottom: 0px solid black;
     border-top: 0px solid black;
     border-radius: 50%;
+    height:auto;
+    width:100%;
+    
   }
 
   .cardd .footerr {
     display: flex;
-    flex: 0;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    width:100%;
   }
 
   .show {
     display: block;
   }
+  .card-container{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin-top: 20px;
+  }
+</style>
+
+
+    
 
 </style>
 
-<br/><br/><p></p>
+
+
+
+
+
+<section id="one" class="spotlights">
+  {% for title,group in groups.items %}
+  <br>
+  <!--<div class="footerr" style="margin-left:auto;margin-right:auto;">
+      <button> {{title}} </button>
+  </div>-->
+  <h1>{{title}}</h1><hr>
+    <div class="card-container">
+    {% for member in group %}
+    
+    <div class="cardd">
+        
+      
+      <img src="{{member.dp}}" alt="Loading" class="bodyy"> <p></p>
+      <div class="footerr">
+      {{member.name}}
+      </div>
+      
+    </div>
     {% endfor %}
-</section>
-</style>
+    </div>
+  {% endfor %}
+    <br/><br/><p></p>
+  </section>
 {% endblock %}
