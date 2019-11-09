@@ -1,0 +1,61 @@
+{% extends 'members/descriptionbase.html' %}
+{% block body %}
+
+<section id="one" class="spotlights">
+    {% for member in batch.batchdetails_set.all %}
+    <div class="cardd">
+        <img src="{{member.dp}}" alt="Loading" class="bodyy"> <p></p>
+      <div class="footerr">
+        <button>{{member.name}}</button>
+      </div>
+      <div class="footerr">
+        <button>{{member.position}}</button>
+      </div>
+    </div>
+<style>
+  .cardd {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 200px;
+    border: 0px solid black;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cardd .header {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardd .bodyy {
+    display: flex;
+    flex: 5;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0px solid black;
+    border-top: 0px solid black;
+    border-radius: 50%;
+  }
+
+  .cardd .footerr {
+    display: flex;
+    flex: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .show {
+    display: block;
+  }
+
+</style>
+
+<br/><br/><p></p>
+    {% endfor %}
+</section>
+</style>
+{% endblock %}
