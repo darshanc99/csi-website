@@ -6,5 +6,5 @@
 - /council/
 ----
 ### ADMIN panel
-- username: username
-- password: password
+- username: csikjsce
+- password: csikjsce
