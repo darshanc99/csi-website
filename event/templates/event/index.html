@@ -1,0 +1,26 @@
+{% extends 'event/base.html' %}
+{% block body %}
+{% if all_events %}
+<section id="two" class="spotlights">
+    {% for event in all_events %}
+    <section>
+        <a href="{{ event.title_picture }}" class="image">
+            <img src="{{ event.title_picture }}" alt="Cannot load img" data-position="center center"/>
+        </a>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3 style="color:white">{{ event.title }}</h3>
+                </header>
+                <ul class="actions">
+                    <li><a href="{% url 'events' %}{{ event.id }}/" class="button" style="color:white">Learn more</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    </section>
+{% else %}
+    
+{% endif %}
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'members/descriptionbase.html' %}
+{% block body %}
+<style>
+  .cardd {
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    width: 300px;
+    border: 0px solid black;
+    position: relative;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top: 20px; 
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .cardd .header {
+    display: flex;
+    flex: 2;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cardd .bodyy {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0px solid black;
+    border-top: 0px solid black;
+    border-radius: 50%;
+    height:auto;
+    width:100%;
+    
+  }
+
+  .cardd .footerr {
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  }
+
+  .show {
+    display: block;
+  }
+  .card-container{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin-top: 20px;
+  }
+</style>
+<section id="one" class="spotlights">
+  {% for title,group in groups.items %}
+  <br/><h3 style="text-align: center">{{title}}</h3>
+    <div class="card-container">
+    {% for member in group %}
+    <div class="cardd">
+      <img src="{{member.dp}}" alt="Loading" class="bodyy"> <p></p>
+      <div class="footerr">
+        {{member.name}}
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+  {% endfor %}
+    <br/><br/><p></p>
+  </section>
+{% endblock %}

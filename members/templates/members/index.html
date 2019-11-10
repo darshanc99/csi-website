@@ -1,0 +1,22 @@
+{% extends 'members/base.html' %}
+{% block body %}
+<section id="two" class="spotlights">
+    {% for batch in all_batch %}
+    <section>
+        <a href="{{ batch.batch_picture }}" class="image">
+            <img src="{{ batch.batch_picture }}" alt="Cannot load img" data-position="center center"/>
+        </a>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3>{{ batch.batch_name }}</h3>
+                </header>
+                <ul class="actions">
+                    <li><a href="{% url 'members' %}{{ batch.id }}/" class="button">Learn more</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+    </section>
+{% endblock %}

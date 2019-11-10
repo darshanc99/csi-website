@@ -1,0 +1,25 @@
+{% extends 'event/descriptionbase.html' %}
+{% block body %}
+{% if event %}
+<section id="one" class="spotlights">
+    {% for event in event.eventdetail_set.all %}
+    <section>
+        <a href="{{ event.event_picture }}" class="image">
+            <img src="{{ event.event_picture }}" alt="Cannot load img" data-position="center center"/>
+        </a>
+        <div class="content">
+            <div class="inner">
+                <header class="major">
+                    <h3 style="color:white">{{ event.event_title }}</h3>
+                </header>
+                <ul class="actions">
+                    <li><p>{{ event.description }}</p></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+</section>
+{% else %}
+{% endif %}
+{% endblock %}

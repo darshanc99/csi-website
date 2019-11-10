@@ -1,0 +1,237 @@
+{% load static %}
+
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+	    <title>CSI-KJSCE</title>
+	    <meta charset="utf-8"/>
+	    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+	    <link rel="stylesheet" href="{% static 'homepage/assets/css/main.css' %}"/>
+	    <link rel="stylesheet" href="{% static 'homepage/assets/css/marginfix.css' %}"/>
+	    <noscript>
+	        <link rel="stylesheet" href="{% static 'homepage/assets/css/noscript.css' %}"/>
+	    </noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				    <!-- Header -->
+    <!-- Note: The "styleN" class below should match that of the banner element. -->
+    <header id="header" class="alt style2">
+        <a href="{% url 'homepage' %}" class="logo"><strong>CSI-KJSCE</strong> <span>Students' Chapter</span></a>
+        <nav>
+            <a href="#menu">Menu</a>
+        </nav>
+    </header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="{% url 'homepage' %}">Home</a></li>
+							<li><a href="{% url 'members' %}">Council</a></li>
+							<li><a href="{% url 'events' %}">Events</a></li>
+						</ul>
+						<ul class="actions stacked">
+						</ul>
+					</nav>
+
+				<!-- Banner -->
+					<section id="banner" class="major">
+						<div class="inner">			
+							<header class="major">
+								<h1>Welcome to CSI KJSCE</h1>
+							</header>
+							<div class="content">
+								<p>ACE YOUR TECH GAME</p>
+								<ul class="actions">
+									<li><a href="#one" class="button next scrolly">Get Started</a></li>
+								</ul>
+								<br/><h2 id="text" style="color:white"></h2>
+							</div>
+						</div>
+					</section>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- One -->
+							<section id="one" class="tiles">
+								<article>
+									<span class="image">
+										<img src="{% static 'homepage/images/darkblue.png' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'members' %}" class="link" style="color:white">Council</a></h3>
+										<p style="color:white">The people who make events successful</p>
+									</header>
+								</article>
+								<article>
+									<span class="image">
+										<img src="{% static 'homepage/images/black.png' %}" alt="" />
+									</span>
+									<header class="major">
+										<h3><a href="{% url 'events' %}" class="link" style="color:white">Events</a></h3>
+										<p style="color:white">A preview of our work</p>
+									</header>
+								</article>
+								
+							</section>
+
+						<!-- Two-->
+							<section id="two">
+								<div class="inner">
+									<header class="major">
+										<h2 style="color:white">About Us</h2>
+									</header>
+									<p>Computer Society of India was established in the year 1965 is today the largest IT professionals society in India. Keeping in mind the interest of IT professionals & computer users, CSI works towards, making the profession an area of choice among all sections of the society. The basic purpose of CSI is to promote IT as a profession. To fulfil this objective, CSI regularly organizes conferences, conventions, lectures and gives various awards. KJSCE's CSI students' chapter was established in 2003. The CSI – KSJCE council is formed from the student members every year. They work under the guidance of their faculty advisors. There are a number of technical & non-technical activities conducted, which include Workshops, Project competitions, Technical Talks on the latest trends in industry, etc. It is one of the biggest student bodies (in terms of number of members) at K. J. Somaiya College of Engineering, Mumbai.</p>
+						
+								</div>
+							</section>
+					</div>
+
+				<!-- Contact -->
+					<section id="contact">
+						<div class="inner">
+							<section>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="6"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Clear" /></li>
+									</ul>
+								</form>
+							</section>
+							<section class="split">
+								<section>
+									<div class="contact-method">
+										<span class="icon alt fa-envelope"></span>
+										<h3>Email</h3>
+										<a href="mailto:csi-kjsce@somaiya.edu">csi-kjsce@somaiya.edu</a>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon alt fa-phone"></span>
+										<h3>Phone</h3>
+										<span>(+91) <a href="tel:7738586795">7738586795</a></span>
+									</div>
+								</section>
+								<section>
+									<div class="contact-method">
+										<span class="icon alt fa-home"></span>
+										<h3>Address</h3>
+										<span>CSI-KJSCE<br />
+										KJ Somaiya College of Engineering<br />
+										Vidyanagar, Vidyavihar<br />
+										Mumbai, Maharashtra-400089</span>
+									</div>
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.7776230055556!2d72.89735125069822!3d19.073512456943355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c627a20bcaa9%3A0xb2fd3bcfeac0052a!2sK.%20J.%20Somaiya%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1569959696220!5m2!1sen!2sin" width="600" height="450" frameborder="100" style="border:0;" allowfullscreen=""style="align:left"></iframe>
+								</section>
+							</section>
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://twitter.com/CSI_KJSCE" class="icon alt fa fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="https://www.facebook.com/csikjsomaiya/" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+								<li><a href="https://www.instagram.com/csikjsce/?hl=en" class="icon alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://github.com/CSI-KJSCE" class="icon alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a href="https://www.linkedin.com/company/csi---kjsce-student%27s-chapter/" class="icon alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Powered by CSI-KJSCE | 2018-19</li>
+							</ul>
+						</div>
+					</footer>
+			</div>
+		<!-- Scripts -->
+		<script src="{% static 'homepage/assets/js/jquery.min.js' %}"></script>
+		<script src="{% static 'homepage/assets/js/jquery.scrolly.min.js' %}"></script>
+		<script src="{% static 'homepage/assets/js/jquery.scrollex.min.js' %}"></script>
+		<script src="{% static 'homepage/assets/js/browser.min.js' %}"></script>
+		<script src="{% static 'homepage/assets/js/breakpoints.min.js' %}"></script>
+		<script src="{% static 'homepage/assets/js/util.js' %}"></script>
+		<script src="{% static 'homepage/assets/js/main.js' %}"></script>
+		<script type="text/javascript">
+
+// List of sentences
+var _CONTENT = [ "RESEARCH", "DEVELOP", "DESIGN", "INNOVATE" ];
+
+// Current sentence being processed
+var _PART = 0;
+
+// Character number of the current sentence being processed 
+var _PART_INDEX = 0;
+
+// Holds the handle returned from setInterval
+var _INTERVAL_VAL;
+
+// Element that holds the text
+var _ELEMENT = document.querySelector("#text");
+
+// Implements typing effect
+function Type() { 
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX++;
+
+	// If full sentence has been displayed then start to delete the sentence after some time
+	if(text === _CONTENT[_PART]) {
+		clearInterval(_INTERVAL_VAL);
+		setTimeout(function() {
+			_INTERVAL_VAL = setInterval(Delete, 100);
+		}, 1000);
+	}
+}
+
+// Implements deleting effect
+function Delete() {
+	var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+	_ELEMENT.innerHTML = text;
+	_PART_INDEX--;
+
+	// If sentence has been deleted then start to display the next sentence
+	if(text === '') {
+		clearInterval(_INTERVAL_VAL);
+
+		// If last sentence then display the first one, else move to the next
+		if(_PART == (_CONTENT.length - 1))
+			_PART = 0;
+		else
+			_PART++;
+		_PART_INDEX = 0;
+
+		// Start to display the next sentence after some time
+		setTimeout(function() {
+			_INTERVAL_VAL = setInterval(Type, 100);
+		}, 200);
+	}
+}
+
+// Start the typing effect on load
+_INTERVAL_VAL = setInterval(Type, 100);
+
+</script>
+	</body>
+</html>
