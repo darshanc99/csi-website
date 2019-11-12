@@ -52,7 +52,7 @@ def contact_form(request):
 def detail(request, event_id):
     try:
         event = Event.objects.get(pk=event_id)
-        template=loader.get_template('event/event_detail.html')
+        template = 'event/event_detail.html'
         #context = {'event':event}
         form = ContactForm
 
@@ -68,7 +68,7 @@ def detail(request, event_id):
                 gs = gspread.authorize(credentials)
                 wsheet = gs.open_by_url("https://docs.google.com/spreadsheets/d/1n3vAb3NeW-C1kr0_vgwiuSNCoQ3uc0jGyTBUjRozMmY/edit?usp=sharing").sheet1
                 wsheet.append_row([name,email,message])
-                return redirect("/event/" + str(event_id))
+                return redirect("/events/" + str(event_id))
             else:
                 return HttpResponse("Fill the form!")
 
