@@ -32,16 +32,16 @@
     border-bottom: 0px solid black;
     border-top: 0px solid black;
     border-radius: 50%;
-    height:auto;
-    width:100%;
+    height:75%;
+    width:115%;
     
   }
 
   .cardd .footerr {
-    justify-content: center;
-    align-items: center;
-    width:100%;
+    width:200%;
+    strength: bold;
     text-align: center;
+    padding-right: 100%;
   }
 
   .show {
@@ -57,13 +57,13 @@
 
 <section id="one" class="spotlights">
   {% for title,group in groups.items %}
-  <br/><h3 style="text-align: center">{{title}}</h3>
+  <br/><br/><br/><h3 style="text-align: center">{{title}}</h3>
     <div class="card-container">
     {% for member in group %}
     <div class="cardd">
       <img src="{{member.dp}}" alt="Loading" class="bodyy"> <p></p>
       <div class="footerr">
-        {{member.name}}
+        <b>{{member.name}}</b>
       </div>
     </div>
     {% endfor %}
