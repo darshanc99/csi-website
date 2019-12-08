@@ -1,6 +1,8 @@
 {% extends 'members/descriptionbase.html' %}
 {% block body %}
 <style>
+
+
   .cardd {
     display: flex;
     flex-direction: column;
@@ -39,6 +41,7 @@
     justify-content: center;
     align-items: center;
     width:100%;
+    text-align: center;
   }
 
   .show {
@@ -51,6 +54,7 @@
     margin-top: 20px;
   }
 </style>
+
 <section id="one" class="spotlights">
   {% for title,group in groups.items %}
   <br/><h3 style="text-align: center">{{title}}</h3>
