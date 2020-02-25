@@ -1818,7 +1818,7 @@ input, select, textarea {
 /* Form */
 
 	form {
-		margin: 0 0 2em 0;
+		margin: 0 1em 2em 1.5em;
 	}
 
 		form > :last-child {
@@ -1867,7 +1867,7 @@ input, select, textarea {
 
 			form > .fields {
 				width: calc(100% + 3em);
-				margin: -1.5em 0 2em -1.5em;
+				margin: -1.5em 2em 2em -1.5em;
 			}
 
 				form > .fields > .field {
@@ -2258,6 +2258,7 @@ input, select, textarea {
 		cursor: default;
 		list-style: none;
 		margin-left: -1em;
+		margin-top:1em;
 		padding-left: 0;
 	}
 
@@ -2883,7 +2884,7 @@ input, select, textarea {
 /* Contact Method */
 
 	.contact-method {
-		margin: 0 0 2em 0;
+		margin: 0 0 2em 1em;
 		padding-left: 3.25em;
 		position: relative;
 	}
@@ -3928,4 +3929,26 @@ input, select, textarea {
 			transform: none;
 			opacity: 1;
 			visibility: visible;
+		}
+		.google-map{
+			width: 350px;
+			height: 350px;
+		}
+		@media screen and (max-width:600px)
+		{
+			.google-map{
+					width: 325px;
+					height: 350px;
+					margin-left:1em;
+					margin-right:0.5em;
+				}
+		}
+		@media screen and (max-width:350px)
+		{
+			.google-map{
+					width: 290px;
+					height: 350px;
+					margin-left:1em;
+					margin-right:0.5em;
+				}
 		}

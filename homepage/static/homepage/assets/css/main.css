@@ -3929,15 +3929,34 @@ input, select, textarea {
 			opacity: 1;
 			visibility: visible;
 		}
+
 /* google Maps Responsive */
 .google-map{
 	width: 350px;
 	height: 350px;
 }
-@media screen and (max-width:600px)
+/* @media screen and (max-width:600px)
 {
 	.google-map{
 			width: 270px;
 			height: 350px;
+		}
+} */
+@media screen and (max-width:600px)
+{
+	.google-map{
+			width: 300px;
+			height: 350px;
+			margin-left:0.5em;
+			margin-right:0.5em;
+		}
+}
+@media screen and (max-width:350px)
+{
+	.google-map{
+			width: 260px;
+			height: 350px;
+			margin-left:0.5em;
+			margin-right:0.5em;
 		}
 }
