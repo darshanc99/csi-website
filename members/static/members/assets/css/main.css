@@ -53,6 +53,8 @@ table {
 
 body {
 	-webkit-text-size-adjust: none;
+	overflow-x:hidden;
+	max-width: 100%;
 }
 
 mark {
@@ -1863,7 +1865,33 @@ input, select, textarea {
 					width: calc(25% - 0.375em);
 				}
 
-		@media screen and (max-width: 480px) {
+		        @media screen and (max-width: 770px) {
+
+					form > .fields {
+						width: calc(100% + 3em);
+						margin: -1.5em 2em 2em 3em;
+					}
+		
+						form > .fields > .field {
+							padding: 1.5em 0 0 1.5em;
+							width: calc(100% - 1.5em);
+						}
+		
+							form > .fields > .field.half {
+								width: calc(100% - 1.5em);
+							}
+		
+							form > .fields > .field.third {
+								width: calc(100% - 1.5em);
+							}
+		
+							form > .fields > .field.quarter {
+								width: calc(100% - 1.5em);
+							}
+		
+				}
+
+				@media screen and (max-width: 480px) {
 
 			form > .fields {
 				width: calc(100% + 3em);
@@ -3948,7 +3976,7 @@ input, select, textarea {
 			.google-map{
 					width: 290px;
 					height: 350px;
-					margin-left:1em;
-					margin-right:0.5em;
+					margin-left:1.5em;
+					margin-right:0em;
 				}
 		}
